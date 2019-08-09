@@ -6,6 +6,12 @@ const auth = require("../../middleware/auth")
 // @route GET api/auth
 // @desc Test route
 // @access Public
-router.get('/', auth, (req, res) => res.send('Auth route'));
+router.get('/', auth, (req, res) => {
+    try{
+
+    }catch(err) {
+
+    }
+});
 
 module.exports = router;

@@ -10,7 +10,7 @@
     "react-moment": "^0.9.2",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1",
+    "react-scripts": "^3.1.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
   },
@@ -21,6 +21,11 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "settings": {
+      "react": {
+        "version": "999.999.999"
+      }
+    },
     "extends": "react-app"
   },
   "browserslist": {

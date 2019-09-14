@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--success-color);
   text-decoration: none;
 }
 
@@ -308,7 +308,7 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--primary-color);
+  border-bottom: solid 1px var(--success-color);
   opacity: 0.9;
 }
 
@@ -323,7 +323,7 @@ button {
 }
 
 .navbar a:hover {
-  color: var(--primary-color);
+  color: var(--success-color);
 }
 
 .navbar .welcome span {

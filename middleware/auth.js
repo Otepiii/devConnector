@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const config = require('config');
+// const {check, validationResult} = require('express-validator')
 
 module.exports = function(req, res, next) {
   //  Get token from header

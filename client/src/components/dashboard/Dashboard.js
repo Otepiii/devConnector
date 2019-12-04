@@ -1,8 +1,9 @@
-import React, { Fragment, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import Spinner from '../layout/spinner';
-import { getCurrentProfile } from '../../actions/profile';
+import React, { Fragment, useEffect } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import Spinner from "../layout/spinner";
+import { getCurrentProfile } from "../../actions/profile";
 
 const Dashboard = ({
   getCurrentProfile,
@@ -17,14 +18,19 @@ const Dashboard = ({
     <Spinner />
   ) : (
     <Fragment>
-      <h1 className=' large text-success'> Dashboard</h1>
-      <p className=' Lead'>
-        <i className='fas fa-user'> Welcome {user && user.name}</i>
+      <h1 className=" large text-success"> Dashboard</h1>
+      <p className=" Lead">
+        <i className="fas fa-user"> Welcome {user && user.name}</i>
       </p>
       {profile !== null ? (
         <Fragment>has</Fragment>
       ) : (
-        <Fragment>has not</Fragment>
+        <Fragment>
+          <p>You have not yet setup a profile, please add some info</p>
+          <Link to="/create-profile" className="btn btn-success my-1">
+            Create Profile
+          </Link>
+        </Fragment>
       )}
     </Fragment>
   );
@@ -41,7 +47,4 @@ const mapStateToProps = state => ({
   profile: state.profile
 });
 
-export default connect(
-  mapStateToProps,
-  { getCurrentProfile }
-)(Dashboard);
+export default connect(mapStateToProps, { getCurrentProfile })(Dashboard);
